@@ -1,0 +1,38 @@
+How many leads can we capture from our website?
+In Professional, Enterprise, Unlimited, Performance, and Developer Edition organizations, you can capture up to 500 leads in a 24–hour period. If your organization exceeds its daily Web-to-Lead limit, the Default Lead Creator (specified in the Web-to-Lead setup page) receives an email containing the additional lead information. If your company regularly exceeds the Web-to-Lead limit, click Help & Training at the top of any page and select the My Cases tab to submit a request for a higher limit directly to Salesforce.
+When your organization reaches the 24–hour limit, Salesforce stores additional requests in a pending request queue that contains both Web-to-Case and Web-to-Lead requests. The requests are submitted when the limit refreshes. The pending request queue has a limit of 50,000 combined requests. If your organization reaches the pending request limit, additional requests are rejected and not queued. Your administrator receives email notifications for the first five rejected submissions. Contact Salesforce Customer Support to change your organization's pending request limit. 
+
+How do I specify which information to capture online?
+When you generate the HTML for your company’s website, you can choose which standard or custom lead fields for which you want to gather information. You must create the custom lead fields prior to generating the HTML code. From Setup, click Customize | Leads | Web-to-Lead to set up this feature and generate the necessary HTML.
+
+
+Can I capture leads from multiple web pages?
+Yes. Insert the generated HTML code into the web pages from which you want to capture leads. Whenever someone submits information on any of those web pages, a lead will be created.
+
+
+How can our webmaster test the Web-to-Lead page?
+Add the following line to your Web-to-Lead page code if you want to see a debugging page when you submit the form. Don't forget to remove this line before releasing the Web-to-Lead page on your website.
+<input type="hidden" name="debug" value="1">
+
+Who owns new web-generated leads?
+Your administrator can create a lead assignment rule to determine how web leads will be automatically assigned to different users or queues. In addition, your administrator must customize the Lead Settings to specify a Default Lead Owner to whom all web leads will be assigned if the assignment rule fails to locate an owner. If you do not use assignment rules, all web leads will be assigned to the Default Lead Creator (specified in the Web-to-Lead setup).
+
+What status is assigned to web-generated leads?
+All new web leads are marked with a status equal to the “default status” that your administrator selects when editing the Lead Status picklist values. In addition, web-generated leads are marked with the “Unread” flag; they have a check mark in the Unread column on the lead list views. When a user views or edits a new web lead, the lead is automatically set to “Read.” This way you can easily locate all new leads using the My Unread Leads list view.
+
+How can I be sure that leads won't be lost?
+The daily limit for Web-to-Lead requests is 500. If your organization exceeds its daily Web-to-Lead limit, the Default Lead Creator (specified in the Web-to-Lead setup page) receives an email containing the additional lead information.
+If a new lead cannot be generated due to errors in your Web-to-Lead setup, Customer Support is notified so that we can assist you in correcting it.
+Salesforce ensures that your leads won't be lost if they are submitted during a scheduled Salesforce downtime.
+
+How can I tell which of my leads are new?
+When a lead is assigned to you, either manually transferred, imported, or generated from the web, the lead is marked as “Unread,” that is, it has a check mark in the Unread column on leads list views. To view your new leads, select the My Unread Leads list view on the Leads tab. When you view or edit an “Unread” lead, it is automatically marked as “Read.”
+
+What happens when I convert leads?
+When you convert leads, Salesforce creates new accounts, contacts, and, opportunities using information from the leads you’re converting. Salesforce moves any campaign members to the new contacts, and the leads become read-only records. If existing accounts and contacts share the same names as those specified on the leads, you can choose to update the existing accounts and contacts. Salesforce adds information from the lead into empty fields; Salesforce does not overwrite existing account and contact data.
+All open and closed activities from the leads are attached to the accounts, contacts, and opportunities. You can assign the owner of the records, and schedule follow-up tasks. When you assign new owners, only the open activities are assigned to the new owner. If you have custom lead fields, that information can be inserted into custom account, contact, or opportunity fields. You can’t view converted leads, but they appear in lead reports. Salesforce updates the Last Modified Date and Last Modified By system fields on converted leads when picklist values included on converted leads are changed.
+
+How are lead fields mapped to other fields during conversion?
+When you convert a lead, data in standard lead fields is transferred into standard account, contact, and opportunity fields. For custom lead fields, the data is mapped to custom account, contact, and opportunity fields as specified by your administrator.
+Any standard lead picklist fields that are blank automatically inherit the default picklist value for accounts, contacts, and opportunities. If your organization uses record types, all records created during lead conversion adopt the default record type for the owner of the newly-created account, contact, and opportunity.
+
