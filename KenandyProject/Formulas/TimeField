@@ -1,0 +1,9 @@
+FLOOR ( MOD( Starts__c - ($System.OriginDateTime + 5/24),1) *24)'
+
+FLOOR ( MOD( Starts__c - ($System.OriginDateTime + 5/24),1) *24)
+
+VALUE( MID( TEXT( LastModifiedDate ), 12, 2 ) )
+
+VALUE( MID( TEXT( Starts__c ), 12, 2 ) )
+
+MID(TEXT(CreatedDate - 0.1667), 12, 5)
