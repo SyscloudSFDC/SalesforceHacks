@@ -7,3 +7,7 @@ VALUE( MID( TEXT( LastModifiedDate ), 12, 2 ) )
 VALUE( MID( TEXT( Starts__c ), 12, 2 ) )
 
 MID(TEXT(CreatedDate - 0.1667), 12, 5)
+
+https://success.salesforce.com/answers?id=90630000000gqgbAAA
+
+
